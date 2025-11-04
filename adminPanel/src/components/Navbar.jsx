@@ -16,24 +16,16 @@ const Navbar = ({setToken}) => {
     ]
 
     return (
-        <nav className='relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 w-72 h-screen overflow-hidden'>
-            {/* Animated background gradient */}
-            <div className='absolute inset-0 bg-gradient-to-br from-blue-600/10 via-purple-600/10 to-pink-600/10 opacity-50'></div>
+        <nav className='relative bg-gray-800 w-72 h-screen overflow-hidden'>
             
-            {/* Decorative elements */}
             <div className='absolute top-0 right-0 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl'></div>
-            <div className='absolute bottom-0 left-0 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl'></div>
             
             <div className='relative z-10 h-full flex flex-col'>
-                {/* Header/Logo */}
                 <div className='px-6 py-8 mb-4'>
                     <div className='flex items-center gap-3 group cursor-pointer'>
                         <div className='relative'>
-                            {/* <div className='absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl blur-md opacity-75 group-hover:opacity-100 transition-opacity'></div> */}
-                            <div className='relative bg-gradient-to-br from-blue-500 to-purple-600 p-2.5 rounded-xl shadow-2xl transform group-hover:scale-110 transition-transform duration-300'>
-                                {/* <Sparkles className='w-6 h-6 text-white' /> */}
+                            <div className='relative bg-gradient-to-br from-gray-500 to-gray-600 p-2.5 rounded-xl shadow-2xl transform group-hover:scale-110 transition-transform duration-300'>
                                 <MdAdminPanelSettings  className='w-6 h-6 text-white'/>
-
                             </div>
                         </div>
                         <div>
@@ -45,7 +37,6 @@ const Navbar = ({setToken}) => {
                     </div>
                 </div>
 
-                {/* Navigation Items */}
                 <div className='flex-1 px-4 py-4'>
                     <div className='flex flex-col gap-2'>
                         {navItem.map((item) => {
@@ -60,14 +51,14 @@ const Navbar = ({setToken}) => {
                                 >
                                     {/* Active indicator bar */}
                                     {isActive && (
-                                        <div className='absolute left-0 top-1/2 -translate-y-1/2 w-1 h-8 bg-gradient-to-b from-blue-400 to-purple-500 rounded-r-full'></div>
+                                        <div className='absolute left-0 top-1/2 -translate-y-1/2 w-1 h-8 bg-gradient-to-b from-gray-400 to-gray-500 rounded-r-full'></div>
                                     )}
                                     
                                     <div className={`
                                         relative flex items-center gap-3 px-5 py-3.5 rounded-xl
                                         transition-all duration-300 ease-out overflow-hidden
                                         ${isActive
-                                            ? 'bg-gradient-to-r from-blue-600/20 to-purple-600/20 text-white shadow-lg border border-blue-500/30'
+                                            ? 'bg-gradient-to-r from-gray-600/20 to-gray-600/20 text-white shadow-lg border border-black-500/30'
                                             : 'text-slate-300 hover:text-white hover:bg-white/5'
                                         }
                                     `}>
@@ -77,11 +68,10 @@ const Navbar = ({setToken}) => {
                                             opacity-0 group-hover:opacity-100 transition-opacity duration-500
                                         `}></div>
                                         
-                                        {/* Icon with background */}
                                         <div className={`
                                             relative p-2 rounded-lg transition-all duration-300
                                             ${isActive 
-                                                ? 'bg-gradient-to-br from-blue-500 to-purple-600 shadow-lg' 
+                                                ? 'bg-gradient-to-br from-gray-500 to-gray-600 shadow-lg' 
                                                 : 'bg-white/5 group-hover:bg-white/10'
                                             }
                                         `}>
@@ -111,20 +101,16 @@ const Navbar = ({setToken}) => {
                 <div className='px-4 py-6 mt-auto'>
                     <div className='relative group'>
                         {/* Glow effect behind button */}
-                        <div className='absolute inset-0 bg-gradient-to-r from-red-500 to-orange-500 rounded-xl blur-md opacity-0 group-hover:opacity-50 transition-opacity duration-300'></div>
                         
                         <button 
                             onClick={()=>setToken('')}
-                            className='relative w-full flex items-center justify-center gap-3 bg-gradient-to-r from-slate-800 to-slate-700 hover:from-red-600 hover:to-orange-600 text-white px-5 py-4 rounded-xl font-medium shadow-lg border border-slate-600 hover:border-red-500/50 transition-all duration-300 ease-out transform hover:scale-105 overflow-hidden'
+                            className='relative w-full flex items-center justify-center gap-3 bg-gradient-to-r from-slate-800 to-slate-700 hover:from-gray-600 hover:to-gray-600 text-white px-5 py-4 rounded-xl font-medium shadow-lg border border-slate-600 hover:border-gray-500/50 transition-all duration-300 ease-out transform hover:scale-105 overflow-hidden'
                         >
                             {/* Animated background on hover */}
-                            <div className='absolute inset-0 bg-gradient-to-r from-red-600 to-orange-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
                             
                             <LogOut className='relative w-5 h-5 transition-transform group-hover:-translate-x-1' />
                             <span className='relative'>Log Out</span>
                             
-                            {/* Shine effect */}
-                            <div className='absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/20 to-transparent'></div>
                         </button>
                     </div>
                     

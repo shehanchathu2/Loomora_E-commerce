@@ -104,7 +104,6 @@ if (!subCategory) return toast.error("Please select a subcategory");
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 p-6 sm:p-10">
       <div className='max-w-7xl mx-auto'>
-        {/* Header Section */}
         <div className='mb-8'>
           <div className='flex items-center gap-3 mb-2'>
             <div className='w-1.5 h-8 bg-gradient-to-b from-blue-500 to-indigo-600 rounded-full'></div>
@@ -115,14 +114,9 @@ if (!subCategory) return toast.error("Please select a subcategory");
           <p className='text-slate-600 ml-5'>Fill in the details to add a new product to your inventory</p>
         </div>
 
-        {/* Form Container */}
         <div className='relative group'>
-          {/* Glow effect */}
-          <div className='absolute -inset-0.5 bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 rounded-2xl opacity-20 group-hover:opacity-30 blur transition-opacity duration-500'></div>
           
           <div className='relative bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden'>
-            {/* Decorative header bar */}
-            <div className='h-2 bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500'></div>
             
             <div className='p-8'>
               <form onSubmit={submitHandler} className='space-y-8'>
@@ -173,14 +167,12 @@ if (!subCategory) return toast.error("Please select a subcategory");
                   <p className='text-xs text-slate-500 mt-2 ml-1'>Upload up to 4 product images (JPG, PNG)</p>
                 </div>
 
-                {/* Product Details Section */}
                 <div className='space-y-6'>
                   <div className='flex items-center gap-2 mb-4'>
                     <div className='w-1 h-6 bg-gradient-to-b from-blue-500 to-indigo-600 rounded-full'></div>
                     <h3 className='text-lg font-semibold text-slate-800'>Product Details</h3>
                   </div>
 
-                  {/* Product Name */}
                   <div>
                     <label className="block mb-2 text-sm font-semibold text-slate-700">Product Name *</label>
                     <input
@@ -193,7 +185,6 @@ if (!subCategory) return toast.error("Please select a subcategory");
                     />
                   </div>
 
-                  {/* Product Description */}
                   <div>
                     <label className="block mb-2 text-sm font-semibold text-slate-700">Product Description *</label>
                     <textarea
@@ -206,7 +197,6 @@ if (!subCategory) return toast.error("Please select a subcategory");
                     ></textarea>
                   </div>
 
-                  {/* Category, Subcategory, Price Row */}
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <div>
                       <label className="block mb-2 text-sm font-semibold text-slate-700">Category *</label>
@@ -275,7 +265,7 @@ if (!subCategory) return toast.error("Please select a subcategory");
                   </div>
 
                   {/* Bestseller Checkbox */}
-                  <div className='bg-gradient-to-r from-amber-50 to-yellow-50 border-2 border-amber-200 rounded-xl p-4'>
+                  <div className='bg-gradient-to-r from-gray-50 to-gray-50 border-2 border-black-200 rounded-xl p-4'>
                     <label className='flex items-center gap-3 cursor-pointer group'>
                       <input 
                         type="checkbox" 
@@ -285,7 +275,7 @@ if (!subCategory) return toast.error("Please select a subcategory");
                         checked={bestseller} 
                       />
                       <span className='text-sm font-semibold text-slate-700 group-hover:text-amber-700 transition-colors'>
-                        Mark as Best Seller ⭐
+                        Mark as Best Seller
                       </span>
                     </label>
                   </div>
@@ -295,7 +285,7 @@ if (!subCategory) return toast.error("Please select a subcategory");
                 <div className='pt-4 flex justify-end'>
                   <button
                     type='submit'
-                    className="group relative px-8 py-4 bg-gradient-to-r from-indigo-600 to-blue-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden transform hover:scale-105"
+                    className="group relative px-8 py-4 bg-blue-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden transform hover:scale-105"
                   >
                     <span className='relative z-10 flex items-center gap-2'>
                       <CloudUpload className='w-5 h-5' />

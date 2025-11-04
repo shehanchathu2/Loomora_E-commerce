@@ -42,7 +42,6 @@ const Allproducts = ({token}) => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 p-6 sm:p-10">
       <div className='max-w-7xl mx-auto'>
-        {/* Header Section */}
         <div className='mb-8'>
           <div className='flex items-center gap-3 mb-2'>
             <div className='w-1.5 h-8 bg-gradient-to-b from-blue-500 to-indigo-600 rounded-full'></div>
@@ -53,17 +52,11 @@ const Allproducts = ({token}) => {
           <p className='text-slate-600 ml-5'>Manage your product inventory</p>
         </div>
 
-        {/* Table Container */}
         <div className="relative group">
-          {/* Glow effect */}
-          <div className='absolute -inset-0.5 bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 rounded-2xl opacity-20 group-hover:opacity-30 blur transition-opacity duration-500'></div>
           
           <div className="relative overflow-hidden bg-white rounded-2xl shadow-xl border border-slate-200">
-            {/* Decorative header bar */}
-            <div className='h-2 bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500'></div>
             
             <div className="p-8">
-              {/* Table Header */}
               <div className='flex items-center justify-between mb-6'>
                 <div>
                   <h2 className="text-2xl font-bold text-slate-800">Product Inventory</h2>
@@ -71,7 +64,6 @@ const Allproducts = ({token}) => {
                 </div>
               </div>
 
-              {/* Table */}
               <div className='overflow-x-auto'>
                 <table className="min-w-full">
                   <thead>
@@ -151,7 +143,6 @@ const Allproducts = ({token}) => {
                 </table>
               </div>
 
-              {/* Empty State */}
               {products.length === 0 && (
                 <div className='py-16 text-center'>
                   <div className='w-20 h-20 bg-gradient-to-br from-slate-100 to-slate-200 rounded-full flex items-center justify-center mx-auto mb-4'>

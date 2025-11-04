@@ -27,43 +27,37 @@ const About = () => {
     }
   ]
 
-  const team = [
-    { name: 'Sarah Johnson', role: 'Founder & CEO', image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop' },
-    { name: 'Michael Chen', role: 'Head of Operations', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop' },
-    { name: 'Emily Rodriguez', role: 'Customer Experience', image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop' },
-    { name: 'David Kim', role: 'Product Manager', image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop' }
-  ]
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       {/* Hero Section */}
       <div className="relative text-white py-24 px-6">
-  {/* Background Image */}
-  <div
-    className="absolute inset-0 bg-cover bg-center"
-    style={{
-  backgroundImage:
-    "url('https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=1920&h=600&fit=crop')",
-}}
+        {/* Background Image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage:
+              "url('https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=1920&h=600&fit=crop')",
+          }}
 
-  ></div>
+        ></div>
 
-  {/* Dark Overlay for Readability */}
-  <div className="absolute inset-0 bg-black/60"></div>
+        {/* Dark Overlay for Readability */}
+        <div className="absolute inset-0 bg-black/60"></div>
 
-  {/* Content */}
-  <div className="relative max-w-5xl mx-auto text-center z-10">
-    <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-tight">
-      Our Story
-    </h1>
-    <p className="text-lg md:text-xl max-w-3xl mx-auto leading-relaxed text-gray-200">
-      Our journey began with a simple vision — to redefine men’s fashion with
-      comfort, confidence, and timeless design. From premium fabrics to
-      meticulous craftsmanship, every piece we create reflects our passion for
-      quality and individuality.
-    </p>
-  </div>
-</div>
+        {/* Content */}
+        <div className="relative max-w-5xl mx-auto text-center z-10">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-tight">
+            Our Story
+          </h1>
+          <p className="text-lg md:text-xl max-w-3xl mx-auto leading-relaxed text-gray-200">
+            Our journey began with a simple vision — to redefine men’s fashion with
+            comfort, confidence, and timeless design. From premium fabrics to
+            meticulous craftsmanship, every piece we create reflects our passion for
+            quality and individuality.
+          </p>
+        </div>
+      </div>
 
 
 
@@ -127,30 +121,6 @@ const About = () => {
         </div>
       </div>
 
-      {/* Team Section */}
-      <div className="max-w-6xl mx-auto px-4 py-20">
-        <h2 className="text-4xl font-bold text-center mb-4 text-gray-900">Meet Our Team</h2>
-        <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-          The passionate people behind your favorite shopping experience
-        </p>
-        <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-8">
-          {team.map((member, index) => (
-            <div key={index} className="text-center group">
-              <div className="relative mb-4 overflow-hidden rounded-xl">
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  className="w-full aspect-square object-cover transform group-hover:scale-110 transition-transform duration-300"
-                />
-              </div>
-              <h3 className="font-bold text-lg text-gray-900">{member.name}</h3>
-              <p className="text-gray-600 text-sm">{member.role}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* CTA Section */}
       <div className="bg-gray-800 text-white py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-4">Join Our Journey</h2>
