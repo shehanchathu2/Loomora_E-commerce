@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+@media (max-width:640px) {
+    a.active{
+        background-color: #2563eb; /* Tailwind's blue-600 */
+        color: white;
+    }
+}
+
