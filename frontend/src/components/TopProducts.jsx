@@ -11,7 +11,7 @@ const TopProducts = () => {
 
     useEffect(() => {
         const filtered = products.filter((item) => item.bestseller)
-        setTopProducts(filtered.slice(0, 4));
+        setTopProducts(filtered.slice(0, 5));
     }, [products])
 
     console.log(topProducts)
@@ -24,12 +24,18 @@ const TopProducts = () => {
                 </p>
             </div>
 
-          <div className='grid grid-cols-2 mx-8 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-4 gap-y-6 lg:mx-20'>                {
-                    topProducts.map((item, index) => {
-                        return <ProductItem key={index} id={item._id} image={item.image} name={item.name} price={item.price} />
-                    })
-                }
-            </div>
+           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 px-4 sm:px-8 lg:px-20">
+  {topProducts.map((item, index) => (
+    <ProductItem
+      key={index}
+      id={item._id}
+      image={item.image}
+      name={item.name}
+      price={item.price}
+    />
+  ))}
+</div>
+
         </div>
     )
 }

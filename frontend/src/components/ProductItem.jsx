@@ -1,28 +1,33 @@
-import React, { useContext } from 'react'
-import { ShopContext } from '../context/ShopContext'
+import React, { useContext } from 'react';
+import { ShopContext } from '../context/ShopContext';
 import { Link } from 'react-router-dom';
 
 const ProductItem = ({ id, image, name, price }) => {
+  const { currency } = useContext(ShopContext);
 
-    const { currency } = useContext(ShopContext)
-    return (
+  return (
+    <Link
+      to={`/product/${id}`}
+      className="text-gray-800 cursor-pointer block group"
+    >
+      {/* Image Container */}
+      <div className="w-full h-64 overflow-hidden border border-gray-300 rounded-lg bg-gray-50">
+        <img
+          src={image[0]}
+          alt={name}
+          className="w-full h-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-110"
+        />
+      </div>
 
-        <Link
-            className='text-gray-700 cursor-pointer'
-            to={`/product/${id}`}
-        >
-            <div className='overflow-hidden border border-gray-400 '>
-                <img
-                    src={image[0]}
-                    alt=""
-                    className="hover:scale-110 transition ease-in-out duration-300 w-full"
-                />
-            </div>
+      {/* Product Info */}
+      <div className="mt-3">
+        <p className="text-sm sm:text-base font-medium truncate">{name}</p>
+        <p className="text-lg font-semibold text-gray-900">
+          {currency} {price}
+        </p>
+      </div>
+    </Link>
+  );
+};
 
-            <p className='pt-3 pb-1 text-sm'>{name}</p>
-            <p className='text-lg font-bold'>{currency} {price}</p>
-        </Link>
-    )
-}
-
-export default ProductItem
+export default ProductItem;

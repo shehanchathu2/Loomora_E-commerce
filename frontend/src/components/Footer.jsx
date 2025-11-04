@@ -9,7 +9,7 @@ const Footer = () => {
         
         {/* Brand Info */}
         <div>
-          <h2 className="text-2xl font-bold text-white mb-4">ShopEase</h2>
+          <h2 className="text-2xl font-bold text-white mb-4">Menova</h2>
           <p className="text-gray-400 text-sm leading-relaxed">
             Your one-stop destination for the latest trends and styles. Shop
             smart, shop easy — wherever you are!
@@ -43,7 +43,7 @@ const Footer = () => {
               <Phone size={16} /> +94 77 123 4567
             </li>
             <li className="flex items-center gap-2">
-              <Mail size={16} /> support@shopease.lk
+              <Mail size={16} /> support@menova.lk
             </li>
             <li className="flex items-center gap-2">
               <MapPin size={16} /> Badulla, Sri Lanka
@@ -70,7 +70,7 @@ const Footer = () => {
 
       {/* Divider */}
       <div className="border-t border-gray-700 pt-6 text-center text-sm text-gray-500">
-        © {new Date().getFullYear()} <span className="text-white font-semibold">ShopEase</span>. 
+        © {new Date().getFullYear()} <span className="text-white font-semibold">Menova</span>. 
         All rights reserved.
       </div>
     </footer>

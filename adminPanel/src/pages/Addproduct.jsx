@@ -25,8 +25,8 @@ const Addproduct = ({token}) => {
 
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
-  const [category, setCategory] = useState('Men');
-  const [subCategory, setSubCategory] = useState('Topwear');
+  const [category, setCategory] = useState('');
+  const [subCategory, setSubCategory] = useState('');
   const [price, setPrice] = useState('');
   const [bestseller, setBestseller] = useState(false);
   const [selectedSizes, setSelectedSizes] = useState([]);
@@ -49,6 +49,7 @@ const Addproduct = ({token}) => {
 
   const submitHandler = async (e) => {
     e.preventDefault();
+if (!subCategory) return toast.error("Please select a subcategory");
 
     try {
 
@@ -65,7 +66,9 @@ const Addproduct = ({token}) => {
       if (files.Image1) formData.append('image1', files.Image1);
     if (files.Image2) formData.append('image2', files.Image2);
     if (files.Image3) formData.append('image3', files.Image3);
-    if (files.Image4) formData.append('image4', files.Image4);
+      if (files.Image4) formData.append('image4', files.Image4);
+      
+      console.log(formData)
 
       const res = await axios.post(backendUrl + '/api/product/add', formData, {
         headers: { token: token }
@@ -75,8 +78,8 @@ const Addproduct = ({token}) => {
         toast.success("Product added successfully")
         setName('')
         setDescription('')  
-        setCategory(' Men')
-        setSubCategory('Topwear')
+        setCategory('')
+        setSubCategory('')
         setPrice('')  
         setBestseller(false)
         setSelectedSizes([])
@@ -212,9 +215,9 @@ const Addproduct = ({token}) => {
                         onChange={(e) => setCategory(e.target.value)}
                       >
                         <option value="">Select Category</option>
-                        <option value="Men">Men</option>
-                        <option value="Women">Women</option>
-                        <option value="Kids">Kids</option>
+                        <option value="CasualWear">Casual Wear</option>
+                        <option value="FormalWear">Formal Wear</option>
+                        <option value="Sportswear">Sportswear</option>
                       </select>
                     </div>
 
@@ -225,9 +228,10 @@ const Addproduct = ({token}) => {
                         onChange={(e) => setSubCategory(e.target.value)}
                       >
                         <option value="">Select Sub Category</option>
-                        <option value="Topwear">Topwear</option>
-                        <option value="Bottomwear">Bottomwear</option>
-                        <option value="Winterwear">Winterwear</option>
+                        <option value="T-Shirts">T-Shirts</option>
+                        <option value="Shirts">Shirts</option>
+                        <option value="Trousers">Trousers</option>
+                        <option value="Shorts">Shorts</option>
                       </select>
                     </div>
 

@@ -15,20 +15,20 @@ const ContactUs = () => {
     {
       icon: Phone,
       title: 'Call Us',
-      detail: '+1 (555) 123-4567',
+      detail: '011-354354',
       description: 'Mon-Fri from 8am to 6pm'
     },
     {
       icon: Mail,
       title: 'Email Us',
-      detail: 'support@store.com',
+      detail: 'monova@store.com',
       description: 'We reply within 24 hours'
     },
     {
       icon: MapPin,
       title: 'Visit Us',
       detail: '123 Commerce Street',
-      description: 'New York, NY 10001'
+      description: 'Colombo-7 ,Sri lanka'
     },
     {
       icon: Clock,
@@ -78,14 +78,25 @@ const ContactUs = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20 px-4">
-        <div className="max-w-6xl mx-auto text-center">
+      <div
+        className="relative text-white py-20 px-4 bg-cover bg-center"
+        style={{
+          backgroundImage:
+            "url('https://images.unsplash.com/photo-1525182008055-f88b95ff7980?w=1920&h=600&fit=crop')",
+        }}
+      >
+        {/* Gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/30 to-purple-600/30"></div>
+
+        {/* Content */}
+        <div className="relative max-w-6xl mx-auto text-center z-10">
           <h1 className="text-5xl font-bold mb-6">Get In Touch</h1>
           <p className="text-xl max-w-3xl mx-auto leading-relaxed">
             Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
           </p>
         </div>
       </div>
+
 
       {/* Contact Methods */}
       <div className="max-w-6xl mx-auto px-4 -mt-12">
@@ -103,16 +114,15 @@ const ContactUs = () => {
         </div>
       </div>
 
-      {/* Main Contact Section */}
+
       <div className="max-w-6xl mx-auto px-4 py-20">
         <div className="grid md:grid-cols-2 gap-12">
-          {/* Contact Form */}
           <div>
             <h2 className="text-3xl font-bold mb-6 text-gray-900">Send us a Message</h2>
             <p className="text-gray-600 mb-8">
               Fill out the form below and our team will get back to you within 24 hours.
             </p>
-            
+
             {submitted ? (
               <div className="bg-green-50 border border-green-200 rounded-xl p-8 text-center">
                 <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -131,7 +141,7 @@ const ContactUs = () => {
                     value={formData.name}
                     onChange={handleChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    placeholder="John Doe"
+                    placeholder="Shehan"
                   />
                 </div>
 
@@ -143,7 +153,7 @@ const ContactUs = () => {
                     value={formData.email}
                     onChange={handleChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    placeholder="john@example.com"
+                    placeholder="Shehan@example.com"
                   />
                 </div>
 
@@ -173,7 +183,7 @@ const ContactUs = () => {
 
                 <button
                   onClick={handleSubmit}
-                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
+                  className="w-full bg-blue-500  text-white py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
                 >
                   <Send className="w-5 h-5" />
                   Send Message
@@ -188,17 +198,21 @@ const ContactUs = () => {
             <p className="text-gray-600 mb-8">
               Come visit us at our headquarters. We'd love to meet you in person!
             </p>
-            
+
             {/* Map Placeholder */}
             <div className="bg-gray-200 rounded-xl h-64 mb-8 overflow-hidden">
-              <img 
-                src="https://images.unsplash.com/photo-1524661135-423995f22d0b?w=800&h=400&fit=crop" 
-                alt="Office location"
-                className="w-full h-full object-cover"
-              />
+              <iframe
+                title="Store Location"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d23061.116162477276!2d7.4258066!3d43.7388149!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2slk!4v1762263947506!5m2!1sen!2slk" 
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
             </div>
 
-            {/* Quick Support Options */}
             <div className="space-y-4">
               {supportOptions.map((option, index) => (
                 <div key={index} className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow flex items-start gap-4">
@@ -220,35 +234,10 @@ const ContactUs = () => {
       </div>
 
       {/* FAQ Section */}
-      <div className="bg-gray-50 py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-4 text-gray-900">Frequently Asked Questions</h2>
-          <p className="text-gray-600 mb-8">
-            Can't find what you're looking for? Check out our FAQ section or contact us directly.
-          </p>
-          <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-full font-semibold hover:opacity-90 transition-opacity">
-            View All FAQs
-          </button>
-        </div>
-      </div>
+
 
       {/* CTA Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-4">Need Immediate Assistance?</h2>
-          <p className="text-lg mb-8 opacity-90">
-            Our customer support team is available 24/7 to help you with any questions or concerns.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors">
-              Call Now
-            </button>
-            <button className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-              Live Chat
-            </button>
-          </div>
-        </div>
-      </div>
+
     </div>
   )
 }

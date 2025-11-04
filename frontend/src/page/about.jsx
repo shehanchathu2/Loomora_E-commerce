@@ -37,15 +37,36 @@ const About = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20 px-4">
-        <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-5xl font-bold mb-6">Our Story</h1>
-          <p className="text-xl max-w-3xl mx-auto leading-relaxed">
-            We started with a simple mission: make quality products accessible to everyone. 
-            Today, we're proud to serve thousands of happy customers worldwide.
-          </p>
-        </div>
-      </div>
+      <div className="relative text-white py-24 px-6">
+  {/* Background Image */}
+  <div
+    className="absolute inset-0 bg-cover bg-center"
+    style={{
+  backgroundImage:
+    "url('https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=1920&h=600&fit=crop')",
+}}
+
+  ></div>
+
+  {/* Dark Overlay for Readability */}
+  <div className="absolute inset-0 bg-black/60"></div>
+
+  {/* Content */}
+  <div className="relative max-w-5xl mx-auto text-center z-10">
+    <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-tight">
+      Our Story
+    </h1>
+    <p className="text-lg md:text-xl max-w-3xl mx-auto leading-relaxed text-gray-200">
+      Our journey began with a simple vision — to redefine men’s fashion with
+      comfort, confidence, and timeless design. From premium fabrics to
+      meticulous craftsmanship, every piece we create reflects our passion for
+      quality and individuality.
+    </p>
+  </div>
+</div>
+
+
+
 
       {/* Stats Section */}
       <div className="max-w-6xl mx-auto px-4 -mt-12">
@@ -76,8 +97,8 @@ const About = () => {
             </p>
           </div>
           <div className="relative">
-            <img 
-              src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop" 
+            <img
+              src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop"
               alt="Our workspace"
               className="rounded-2xl shadow-2xl"
             />
@@ -116,8 +137,8 @@ const About = () => {
           {team.map((member, index) => (
             <div key={index} className="text-center group">
               <div className="relative mb-4 overflow-hidden rounded-xl">
-                <img 
-                  src={member.image} 
+                <img
+                  src={member.image}
                   alt={member.name}
                   className="w-full aspect-square object-cover transform group-hover:scale-110 transition-transform duration-300"
                 />
@@ -130,7 +151,7 @@ const About = () => {
       </div>
 
       {/* CTA Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16 px-4">
+      <div className="bg-gray-800 text-white py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-4">Join Our Journey</h2>
           <p className="text-lg mb-8 opacity-90">

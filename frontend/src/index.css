@@ -7,6 +7,10 @@
     display: none;
 }
 
+*{
+    font-family: serif;
+}
+
 @media (max-width:640px) {
     a.active{
         background-color: #2563eb; /* Tailwind's blue-600 */

@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { Home, Package, Plus, ShoppingCart, Sparkles, LogOut } from 'lucide-react';
+import { MdAdminPanelSettings } from "react-icons/md";
+
 
 const Navbar = ({setToken}) => {
 
@@ -27,14 +29,16 @@ const Navbar = ({setToken}) => {
                 <div className='px-6 py-8 mb-4'>
                     <div className='flex items-center gap-3 group cursor-pointer'>
                         <div className='relative'>
-                            <div className='absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl blur-md opacity-75 group-hover:opacity-100 transition-opacity'></div>
+                            {/* <div className='absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl blur-md opacity-75 group-hover:opacity-100 transition-opacity'></div> */}
                             <div className='relative bg-gradient-to-br from-blue-500 to-purple-600 p-2.5 rounded-xl shadow-2xl transform group-hover:scale-110 transition-transform duration-300'>
-                                <Sparkles className='w-6 h-6 text-white' />
+                                {/* <Sparkles className='w-6 h-6 text-white' /> */}
+                                <MdAdminPanelSettings  className='w-6 h-6 text-white'/>
+
                             </div>
                         </div>
                         <div>
                             <h1 className='text-3xl font-bold bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent tracking-wide'>
-                                Loomora
+                                Menova
                             </h1>
                             <p className='text-xs text-slate-400 mt-0.5'>Admin Dashboard</p>
                         </div>
@@ -126,7 +130,7 @@ const Navbar = ({setToken}) => {
                     
                     {/* Footer text */}
                     <p className='text-center text-xs text-slate-500 mt-4'>
-                        © 2024 Loomora Admin
+                        © 2024 Menova Admin
                     </p>
                 </div>
             </div>

@@ -220,7 +220,7 @@ const Dashboard = ({ token }) => {
                         <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 rounded-2xl opacity-20 group-hover:opacity-30 blur transition-opacity duration-500"></div>
 
                         <div className="relative bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
-                            <div className="h-1.5 bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500"></div>
+                            {/* <div className="h-1.5 bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500"></div> */}
 
                             <div className="p-6">
                                 <div className="flex items-center gap-2 mb-4">
@@ -264,7 +264,6 @@ const Dashboard = ({ token }) => {
                         <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-500 via-pink-500 to-rose-500 rounded-2xl opacity-20 group-hover:opacity-30 blur transition-opacity duration-500"></div>
 
                         <div className="relative bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
-                            <div className="h-1.5 bg-gradient-to-r from-purple-500 via-pink-500 to-rose-500"></div>
 
                             <div className="p-6">
                                 <div className="flex items-center gap-2 mb-4">
@@ -279,8 +278,8 @@ const Dashboard = ({ token }) => {
                                         stats.topProducts.map((product, index) => (
                                             <div key={index} className="flex items-center justify-between p-3 bg-slate-50 rounded-xl hover:bg-slate-100 transition-colors">
                                                 <div className="flex items-center gap-3 flex-1">
-                                                    <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg flex items-center justify-center text-white font-bold">
-                                                        #{index + 1}
+                                                    <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold">
+                                                    {index + 1}
                                                     </div>
                                                     <div>
                                                         <p className="font-semibold text-slate-800 text-sm">{product.name}</p>

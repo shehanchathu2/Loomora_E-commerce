@@ -5,6 +5,10 @@ import { assets } from "../assets/assets";
 import { ShopContext } from "../context/ShopContext";
 import { use } from "react";
 import { useEffect } from "react";
+import { GiShoppingCart } from "react-icons/gi";
+import { FaGem } from "react-icons/fa";
+
+
 
 const Navbar = () => {
   const [visible, setVisible] = useState(false);
@@ -28,13 +32,19 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
 
         {/* Logo Section */}
-        <Link to="/" className="flex items-center gap-2">
-          <ShoppingBag className="text-blue-600 w-7 h-7" />
-          <span className="text-xl font-bold text-gray-800">Loomora</span>
+
+
+        <Link to="/" className="flex items-center gap-2 group">
+          <FaGem className="w-7 h-7 text-amber-500 group-hover:text-yellow-600 transition-colors" />
+          <span className="text-2xl font-serif font-semibold text-gray-900 group-hover:text-amber-600 transition-colors">
+            Menova
+          </span>
         </Link>
 
+
+
         {/* Navigation Links */}
-        <div className="hidden md:flex gap-8 text-gray-700 font-medium">
+        <div className="hidden md:flex gap-8 font-medium text-lg font-serif text-gray-900">
           <NavLink
             to="/"
             className={({ isActive }) =>
@@ -86,13 +96,13 @@ const Navbar = () => {
             <img onClick={() => token ? null : navigate('/login')} src={assets.profile_icon} alt="profile" className="w-5 cursor-pointer" />
 
             {token &&
-            <div className="group-hover:block hidden absolute dropdown-menu right-0 pt-4 w-55">
-              <div className="flex flex-col gap-2 w-36 py-3 px-5 bg-slate-100 text-black rounded-md shadow">
-                <Link to="/login" className="hover:text-blue-600 font-medium">My profile</Link>
-                <Link to="/order" className="hover:text-blue-600 font-medium">Orders</Link>
-                <Link to="/login" onClick={logOut} className="hover:text-blue-600 font-medium">Logout</Link>
+              <div className="group-hover:block hidden absolute dropdown-menu right-0 pt-4 w-55">
+                <div className="flex flex-col gap-2 w-36 py-3 px-5 bg-slate-100 text-black rounded-md shadow">
+                  <Link to="/login" className="hover:text-blue-600 font-medium">My profile</Link>
+                  <Link to="/order" className="hover:text-blue-600 font-medium">Orders</Link>
+                  <Link to="/login" onClick={logOut} className="hover:text-blue-600 font-medium">Logout</Link>
+                </div>
               </div>
-            </div>
             }
           </div>
 
