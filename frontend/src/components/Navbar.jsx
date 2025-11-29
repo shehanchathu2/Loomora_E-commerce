@@ -37,7 +37,7 @@ const Navbar = () => {
         <Link to="/" className="flex items-center gap-2 group">
           <FaGem className="w-7 h-7 text-amber-500 group-hover:text-yellow-600 transition-colors" />
           <span className="text-2xl font-serif font-semibold text-gray-900 group-hover:text-amber-600 transition-colors">
-            Menova
+            Loomora
           </span>
         </Link>
 
