@@ -1,0 +1,3 @@
+Loomora
+f - https://loomora-f1.vercel.app/
+a - https://loomora-admin1.vercel.app/
