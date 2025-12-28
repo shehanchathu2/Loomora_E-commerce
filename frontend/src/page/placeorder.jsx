@@ -60,9 +60,7 @@ const PlaceOrder = () => {
 
       switch (method) {
         case 'cod':
-          console.log(token)
           const res = await axios.post(backendUrl + '/api/order/placeorder', orderData, {headers: {token }})
-          console.log(res.data)
           if (res.data.success) {
             setCartItem({})
             toast.success("Order placed successfully");
@@ -76,8 +74,8 @@ const PlaceOrder = () => {
           if (stripeRes.data.success) {
             window.location.replace(stripeRes.data.url)
           } else {
-            console.log(error)
-            toast.error("failed")
+            console.log("Please login to continue")
+            toast.error("Please login to continue")
           }
           break;
 
