@@ -66,7 +66,7 @@ const PlaceOrder = () => {
             toast.success("Order placed successfully");
             navigate('/order')
           } else {
-            toast.error("failed")
+           toast.error("Please login to continue")
           }
           break;
         case 'stripe':
